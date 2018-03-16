@@ -7,7 +7,7 @@ use Concrete\Package\InstagramFeed\Src\InstagramService;
 class Controller extends BlockController
 {
 
-
+    protected $btTable = 'btInstagramFeed';
     protected $btInterfaceWidth = "450";
     protected $btWrapperClass = 'ccm-ui';
     protected $btInterfaceHeight = "538";
@@ -24,10 +24,23 @@ class Controller extends BlockController
     }
 
     public function view(){
-      $service = new InstagramService("concrete5");
+
+      $service = new InstagramService($this->instagramUsername);
       $medias = $service->getPublicMediaFiles();
       $this->set('medias', $medias);
 
+    }
+
+    public function edit(){
+
+    }
+
+    public function add(){
+
+    }
+
+    public function save($args){
+      parent::save($args);
     }
 
 }

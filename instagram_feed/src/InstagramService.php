@@ -1,7 +1,7 @@
 <?php
 namespace Concrete\Package\InstagramFeed\Src;
 
-use InstagramScraper\Instagram;
+use Concrete\Package\InstagramFeed\Src\Instagram\Instagram;
 
 class InstagramService
 {

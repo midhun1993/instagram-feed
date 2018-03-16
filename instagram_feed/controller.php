@@ -36,9 +36,5 @@ class Controller extends Package{
     }
   }
 
-  public function on_start(){
-    require $this->getPackagePath().'/vendor/autoload.php';
-  }
-
 }
 ?>
